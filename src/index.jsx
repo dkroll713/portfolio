@@ -1,13 +1,18 @@
 import React from 'react';
-
-import reactDom from 'react-dom';
 import { createRoot } from 'react-dom/client'
+
+import Home from './Pages/Home.jsx'
 
 const root = createRoot(document.getElementById('root'));
 
+import './_global.scss'
+
 const App = () => {
   return (
-    <div>Hello world</div>
+    <>
+      <canvas id="canvas"></canvas>
+      <Home />
+    </>
   )
 }
 

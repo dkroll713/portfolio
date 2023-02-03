@@ -1,0 +1,56 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  height: 50vh;
+  width: 96.5%;
+  margin-left: .5%;
+  margin-right: .5%;
+  padding: 2.5%;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.left {
+  align-items: flex-start;
+}
+
+.right {
+  align-items: flex-end;
+}
+
+.projectTitle {
+  font-size: 5em;
+  font-weight: 900;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 4%;
+}
+
+.plinks {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 5%;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.plink {
+  color: green
+}
+
+.plink:hover {
+  color: #00FF41;
+}
+
+.plink:visited {
+  color: #00FF41;
+}
+
+.projectDescTitle {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.projectDesc {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
