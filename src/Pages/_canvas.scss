@@ -1,0 +1,17 @@
+.intro {
+  position: relative;
+  padding-top: 50px;
+  height: 50vh;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.canvasContainer {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 100%;
+}
+
+#introCanvas {
+  // image-rendering: pixelated;
+}

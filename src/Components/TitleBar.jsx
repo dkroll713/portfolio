@@ -15,7 +15,7 @@ const TitleBar = () => {
           <a className="link" href={"#intro"}>Home</a>
           <a className="link" href={"#about"}>About me</a>
           <a className="link" href={"#projects"}>Projects</a>
-          <a className="link">Contact/Hire</a>
+          <a className="link" href={"#contact"}>Contact/Hire</a>
         </div>
       </div>
     </div>

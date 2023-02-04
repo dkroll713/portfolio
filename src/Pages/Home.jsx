@@ -4,6 +4,7 @@ import TitleBar from '../Components/TitleBar.jsx'
 import Intro from './Intro.jsx';
 import About from './About.jsx';
 import Projects from './Projects.jsx';
+import Contact from './Contact.jsx';
 
 import './_home.scss'
 
@@ -15,6 +16,7 @@ const Home = () => {
         <Intro />
         <About />
         <Projects />
+        <Contact />
       </div>
     </>
   )
