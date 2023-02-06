@@ -187,16 +187,16 @@ const Intro = () => {
         ctx.fillText('v', 470, 80)
       }, 300)
       setTimeout(() => {
-        ctx.fillText('w', 500, 80)
+        ctx.fillText('w', 495, 80)
       }, 500)
       setTimeout(() => {
-        ctx.fillText('x', 535, 80)
+        ctx.fillText('x', 530, 80)
       }, 650)
       setTimeout(() => {
-        ctx.fillText('y', 560, 80)
+        ctx.fillText('y', 545, 80)
       }, 800)
       setTimeout(() => {
-        ctx.fillText('z', 585, 80)
+        ctx.fillText('z', 565, 80)
       }, 950)
 
       setTimeout(() => {
