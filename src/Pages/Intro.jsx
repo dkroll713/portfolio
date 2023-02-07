@@ -118,11 +118,12 @@ const Intro = () => {
 
 
         // refactor so that it only checks fit if char is first letter in the printed word
-        const calcSpacing = (word) => {
+        const calcSpacing = (word, index) => {
           let res = 0;
+          // if (index === 0) console.log('first letter in the word')
           word = word.split('');
           word.map((char, index) => {
-            res += spacing[char]
+            res += (spacing[char] * 2)
           })
           return res;
         }
@@ -131,21 +132,26 @@ const Intro = () => {
         let pWidth = container.offsetWidth;
         let pHeight = container.offsetHeight;
         let count = 0;
+        let idx = 0;
         while (map[index]) {
           let priorChar = map[index - 1] ? map[index - 1] : null
           let char = map[index];
-          if (char === ' ') count++;
+          if (char === ' ') {
+            count++;
+            idx = 0;
+          }
           let cur = words[count];
-          let sp = calcSpacing(cur);
+          let sp = calcSpacing(cur, idx);
           // console.log(cur, 'has length of', sp, 'pixels')
-          console.log(pWidth - space, 'pixels remain on the line -', cur, 'is', sp, '-', char)
+          // console.log(pWidth - space, 'pixels remain on the line -', cur, 'is', sp, '-', char)
 
-          line += space + (sp * 2) > pWidth + 50 ? 40 : 0
-          space = space + (sp * 2) > pWidth + 50 ? 0 : space;
+          idx === 0 ? line += space + (sp) > pWidth - 20 ? 40 : 0 : null;
+          idx === 0 ? space = space + (sp) > pWidth - 20 ? 0 : space : null
           space += priorChar ? spacing[priorChar] : 0;
           delay += Math.floor(Math.random() * maxTime) + minTime
           setDelay(char, space > pWidth - 50 ? 0 : space, space > pWidth - 50 ? line += 40 : line, delay)
           index++;
+          idx++;
         }
         line += 40;
         // setTimeout(ctx.fillText('a', spacing['a'], 80), 1500)
