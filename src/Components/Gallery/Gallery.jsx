@@ -20,7 +20,7 @@ const Gallery = (props) => {
     min = Math.min(...Object.keys(assets))
     max = Math.max(...Object.keys(assets))
   }
-  console.log(min, max)
+  // console.log(min, max)
 
   const goLower = () => {
     if (active == min) {

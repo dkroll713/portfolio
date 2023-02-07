@@ -32,7 +32,7 @@ const ProjectTab = (props) => {
         {
           desc ? descText.map(text => {
             return (
-              <p className="projectDesc">{text}</p>
+              <p key={Math.random() * 1} className="projectDesc">{text}</p>
             )
           })
             : null
