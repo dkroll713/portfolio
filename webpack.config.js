@@ -4,7 +4,7 @@ module.exports = {
   mode: "development",
   entry: "./src/index.jsx",
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, 'docs'),
     filename: "bundle.js"
   },
   // [module] will allow us to set any external modules we have added to webpack
@@ -35,7 +35,7 @@ module.exports = {
   devServer: {
     // [static] config for how what to serve
     static: {
-      directory: path.join(__dirname, 'public'),
+      directory: path.join(__dirname, 'docs'),
     },
     compress: true,
     // [port] what port on our local machine to run the dev server
