@@ -1,0 +1,44 @@
+.galleryContainer {
+  height: 250px;
+  width: 100%;
+}
+
+.gallery {
+  background-color: #0D0208;
+  height: 100%;
+  width: 100%;
+}
+
+.imageContainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.leftArrow {
+  height: 100%;
+  width: 33%;
+}
+
+.rightArrow {
+  height: 100%;
+  width: 33%;
+}
+
+img {
+  cursor: pointer
+}
+
+.imageModal {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.isBlurred {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}

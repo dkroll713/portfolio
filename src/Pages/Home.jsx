@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import TitleBar from '../Components/TitleBar.jsx'
 import Intro from './Intro.jsx';
@@ -9,14 +9,29 @@ import Contact from './Contact.jsx';
 import './_home.scss'
 
 const Home = () => {
+  const [modalOpen, setModalOpen] = useState(false)
+  const [open, setOpen] = useState(null)
   return (
     <>
       <div className="page" id="home">
-        <TitleBar />
-        <Intro />
-        <About />
-        <Projects />
-        <Contact />
+        <TitleBar
+          modalOpen={modalOpen}
+        />
+        <Intro
+          modalOpen={modalOpen}
+        />
+        <About
+          modalOpen={modalOpen}
+        />
+        <Projects
+          modalOpen={modalOpen}
+          setModalOpen={setModalOpen}
+          open={open}
+          setOpen={setOpen}
+        />
+        <Contact
+          modalOpen={modalOpen}
+        />
       </div>
     </>
   )

@@ -2,8 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 import './_canvas.scss'
 
-const Intro = () => {
-
+const Intro = (props) => {
+  // const modalOpen = { props }
+  // let element = document.getElementById('intro')
+  // if (element && modalOpen) {
+  //   element.classList.add('isBlurred')
+  // } else if (element) {
+  //   element.classList.remove('isBlurred')
+  // }
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {

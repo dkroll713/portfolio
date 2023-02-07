@@ -1,8 +1,15 @@
 import React from 'react';
 
-const About = () => {
+const About = (props) => {
+  const modalOpen = { props }
+  let element = document.getElementById('about')
+  if (element && modalOpen) {
+    element.classList.add('isBlurred')
+  } else if (element) {
+    element.classList.remove('isBlurred')
+  }
   return (
-    <div className="about" id="about">
+    <div className={`about`} id="about" >
       <h3 className="aboutTitle">Full-stack software engineer and web developer.</h3>
       <p className="aboutMe">
         I've worked on many different projects, including:
@@ -107,7 +114,7 @@ const About = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
