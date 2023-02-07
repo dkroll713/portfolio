@@ -31,12 +31,12 @@ const Projects = (props) => {
         link={"https://54.174.194.84/"}
         ghlink={"https://github.com/dkroll713/reach"}
         assets={{
-          0: '/../../assets/mastermind_rules.png',
-          1: '/../../assets/mastermind_leaderboards.png',
-          2: '/../../assets/mastermind_history.png',
-          3: '/../../assets/mastermind_difficulties.png',
-          4: '../../assets/mastermind_guess.png',
-          5: '/../../assets/mastermind_matrix.png'
+          0: '/assets/mastermind_rules.png',
+          1: '/assets/mastermind_leaderboards.png',
+          2: '/assets/mastermind_history.png',
+          3: '/assets/mastermind_difficulties.png',
+          4: '/assets/mastermind_guess.png',
+          5: '/assets/mastermind_matrix.png'
         }}
         modalOpen={modalOpen}
         setModalOpen={setModalOpen}
