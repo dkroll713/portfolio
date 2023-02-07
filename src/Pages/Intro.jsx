@@ -55,7 +55,7 @@ const Intro = () => {
         }, 2000)
         setTimeout(() => {
           // ctx.fillText('<\\ Welcome to the portfolio~', 10, 90)
-          loadText('<\\ My name is David Kroll and I welcome you to my portfolio')
+          loadText('<\\ My name is David Kroll and this is my portfolio')
         }, 3000)
         setTimeout(() => {
           loadText('<\\ I am a software engineer and full-stack web developer')
@@ -64,13 +64,13 @@ const Intro = () => {
           loadText('<\\ My preferred tech stack is PostgreSQL, Express.js, React.js, & Node.js')
         }, 5000)
         setTimeout(() => {
-          loadText('<\\ I am a quick learner and can pick up other languages on the fly')
+          loadText('<\\ I am a quick learner and can pick up other languages, technologies, and libraries on the fly')
         }, 6000)
         setTimeout(() => {
           loadText('<\\ I am also competent in GoLang, Python, and am comfortable in the CLI in any OS')
         }, 7000)
         setTimeout(() => {
-          loadText('<\\ I have a variety of projects available to browse - scroll down or click the Projects tab above')
+          loadText('<\\ I have a variety of projects available to browse - scroll down or click the Projects tab at the top')
         }, 8000)
         setTimeout(() => {
           loadText('<\\ I am open to full-time roles, part-time roles, and contract work')
@@ -93,7 +93,7 @@ const Intro = () => {
           'A': 30, 'B': 30, 'C': 30, 'D': 30, 'E': 30, 'F': 25, 'G': 30, 'H': 30, 'I': 10, 'J': 25, 'K': 25, 'L': 30,
           'M': 35, 'N': 30, 'O': 30, 'P': 30, 'Q': 30, 'R': 30, 'S': 30, 'T': 30, 'U': 30, 'V': 35, 'W': 40,
           'X': 25, 'Y': 30, 'Z': 30,
-          ' ': 20, '.': 5, ',': 5, '-': 25, '<': 15, '\\': 10, '&': 15
+          ' ': 20, '.': 5, ',': 5, '-': 25, '<': 15, '\\': 10, '&': 15, '~': 20
         }
         while (string.length > 0) {
           let splice = string.splice(0, 1);

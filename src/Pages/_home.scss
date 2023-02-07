@@ -72,27 +72,42 @@
 
 .techStacks {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 10%;
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 700;
 }
 
 .stackList {
-  margin-top: 10%;
-  margin-left: 10%;
-  margin-bottom: 10%;
+  padding: 10%;
+  font-weight: 600;
 }
 
 ul {
-  width: 50%;
+  width: 100%;
 }
 
 li {
   padding: 15%;
+  width: 100%;
 }
 
 .projects {
   padding-top: 50px;
   // height: 100%;
   width: 100%;
+  font-weight: 600;
+}
+
+.contact {
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
 }
 
 .email {

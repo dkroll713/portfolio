@@ -3,6 +3,7 @@ import React from 'react';
 import ProjectTab from '../Components/ProjectTab.jsx';
 
 const Projects = () => {
+
   return (
     <div className="projects" id="projects">
       <ProjectTab
