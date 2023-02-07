@@ -12,6 +12,10 @@ const ProjectTab = (props) => {
 
   let linkAnchor = link ? <a className="plink" href={link}>To a deployed instance</a> : null
   let ghLinkAnchor = ghlink ? <a className="plink" href={ghlink}>To the GitHub repo</a> : null
+  let descText
+  if (desc) {
+    descText = desc.split('\n')
+  }
   return (
     <>
       <div className={`project ${alignment}`} id={name}>
@@ -24,7 +28,15 @@ const ProjectTab = (props) => {
           {ghLinkAnchor}
         </div>
         <h3 className="projectDescTitle">Project Description</h3>
-        <p className="projectDesc">{desc}</p>
+        {/* <p className="projectDesc">{desc}</p> */}
+        {
+          desc ? descText.map(text => {
+            return (
+              <p className="projectDesc">{text}</p>
+            )
+          })
+            : null
+        }
       </div>
       <div className="galleryContainer isNotBlurred">
         <Gallery
