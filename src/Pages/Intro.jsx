@@ -51,30 +51,33 @@ const Intro = () => {
           ctx.clearRect(0, 0, pWidth, pHeight)
         }, 1500)
         setTimeout(() => {
-          ctx.fillText('<\\ Loaded~', 10, 50)
+          ctx.fillText('<\\ Loaded~', 0, 50)
         }, 2000)
         setTimeout(() => {
           // ctx.fillText('<\\ Welcome to the portfolio~', 10, 90)
-          loadText('My name is David Kroll and I welcome you to my portfolio.')
+          loadText('<\\ My name is David Kroll and I welcome you to my portfolio')
         }, 3000)
         setTimeout(() => {
-          loadText('I am a full stack software engineer and web-dev.')
+          loadText('<\\ I am a software engineer and full-stack web developer')
         }, 4000)
         setTimeout(() => {
-          loadText('My preferred tech stack is PostgreSQL, Express.js, React.js, Node.js.')
+          loadText('<\\ My preferred tech stack is PostgreSQL, Express.js, React.js, & Node.js')
         }, 5000)
         setTimeout(() => {
-          loadText('I am a quick learner and can pick up other languages on the fly.')
+          loadText('<\\ I am a quick learner and can pick up other languages on the fly')
         }, 6000)
         setTimeout(() => {
-          loadText('I am also competent in GoLang, Python, and am comfortable in the CLI in any OS.')
+          loadText('<\\ I am also competent in GoLang, Python, and am comfortable in the CLI in any OS')
         }, 7000)
         setTimeout(() => {
-          loadText('I have a variety of projects on display - scroll down or click the Projects tab above.')
+          loadText('<\\ I have a variety of projects available to browse - scroll down or click the Projects tab above')
         }, 8000)
         setTimeout(() => {
-          loadText('I am open to full-time roles, part-time roles, and contract work.')
+          loadText('<\\ I am open to full-time roles, part-time roles, and contract work')
         }, 9000)
+        setTimeout(() => {
+          loadText('<\\ I can be reached via my email at the bottom of the page')
+        }, 10000)
       }
       let line = 80;
       let delay = 0;
@@ -90,7 +93,7 @@ const Intro = () => {
           'A': 30, 'B': 30, 'C': 30, 'D': 30, 'E': 30, 'F': 25, 'G': 30, 'H': 30, 'I': 10, 'J': 25, 'K': 25, 'L': 30,
           'M': 35, 'N': 30, 'O': 30, 'P': 30, 'Q': 30, 'R': 30, 'S': 30, 'T': 30, 'U': 30, 'V': 35, 'W': 40,
           'X': 25, 'Y': 30, 'Z': 30,
-          ' ': 20, '.': 5, ',': 5, '-': 25,
+          ' ': 20, '.': 5, ',': 5, '-': 25, '<': 15, '\\': 10, '&': 15
         }
         while (string.length > 0) {
           let splice = string.splice(0, 1);
@@ -102,7 +105,7 @@ const Intro = () => {
         let minTime = 25;
 
         index = 0;
-        let space = 0;
+        let space = 10;
 
 
         const setDelay = (char, space, line, time) => {
@@ -113,25 +116,32 @@ const Intro = () => {
           )
         }
 
+
+        // refactor so that it only checks fit if char is first letter in the printed word
+        const calcSpacing = (word) => {
+          let res = 0;
+          word = word.split('');
+          word.map((char, index) => {
+            res += spacing[char]
+          })
+          return res;
+        }
+
         let container = document.getElementById('container');
         let pWidth = container.offsetWidth;
         let pHeight = container.offsetHeight;
-
+        let count = 0;
         while (map[index]) {
           let priorChar = map[index - 1] ? map[index - 1] : null
           let char = map[index];
-          let word = '';
-          let invalid = ' '
-          char === invalid ? null : word += char;
-          if (word === words[0]) {
-            console.log(word)
-            words.splice(0, 1)
-            let prior = word;
-            word = '';
-            console.log(prior);
-          }
-          space = space > pWidth - 50 ? 0 : space;
-          line += space > pWidth - 50 ? 40 : 0
+          if (char === ' ') count++;
+          let cur = words[count];
+          let sp = calcSpacing(cur);
+          // console.log(cur, 'has length of', sp, 'pixels')
+          console.log(pWidth - space, 'pixels remain on the line -', cur, 'is', sp, '-', char)
+
+          line += space + (sp * 2) > pWidth + 50 ? 40 : 0
+          space = space + (sp * 2) > pWidth + 50 ? 0 : space;
           space += priorChar ? spacing[priorChar] : 0;
           delay += Math.floor(Math.random() * maxTime) + minTime
           setDelay(char, space > pWidth - 50 ? 0 : space, space > pWidth - 50 ? line += 40 : line, delay)
