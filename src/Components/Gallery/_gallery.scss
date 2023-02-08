@@ -4,7 +4,7 @@
 }
 
 .gallery {
-  background-color: #0D0208;
+  background-color: black;
   height: 100%;
   width: 100%;
 }
@@ -17,18 +17,31 @@
   justify-content: center;
 }
 
-.leftArrow {
-  height: 100%;
-  width: 33%;
-}
+// .leftArrow {
+//   height: 100%;
+//   width: 33%;
+// }
 
-.rightArrow {
+// .rightArrow {
+//   height: 100%;
+//   width: 33%;
+// }
+
+.arrow {
+  display: flex;
   height: 100%;
-  width: 33%;
+  width: 100%;
+  justify-content: center;
+  margin: 5px;
+  align-items: center;
+  font-size: 300%;
+  cursor: pointer;
+  // border: 5px solid white;
 }
 
 img {
-  cursor: pointer
+  cursor: pointer;
+  border: 1px solid white;
 }
 
 .imageModal {

@@ -26,7 +26,7 @@ const Projects = (props) => {
         desc={
           `Made as part of a takehome challenge, this game has roots in cryptography and codebreaking. Users can select from easy, medium, hard, or custom-set difficulties and try to crack a computer-generated code using a combination of intuition and computer feedback.
             Users can create accounts and sign-in, and when signed in, can submit scores to a global leaderboard. If connection to the server is lost, users can use the local leaderboards.
-            Made in the PERN stack - game UI generated with React, leaderboards stored in a Postgres instance and communicatd to via Express server. User authentication done with Auth0.`
+            Made in the PERN stack - game UI generated with React, leaderboards stored in a Postgres instance and communicatd to via Express server. User authentication done with Auth0. Deployed in an AWS EC2 instance, HTTPS-enabled with self-signed certificates.`
         }
         link={"https://54.174.194.84/"}
         ghlink={"https://github.com/dkroll713/reach"}
@@ -48,6 +48,12 @@ const Projects = (props) => {
         alignment="right"
         title={"SimpleStocks"}
         subtitle={"A free financial analysis web-app."}
+        desc={
+          `This project has been evolving for several years - it began as a .txt file, several Python scripts, and a MariaDB database.
+          It's now a full-fledged web-app, built in Postgres, Express, React, & Node with user authentication enabled by Auth0, charts provided by react-apexcharts, and more. SimpleStocks aggregates the best and most actionable information from various investment analysis sites like Yahoo Finance and Schwab.com.
+          Historical data is gathered from datasets provided by Sharadar and the SEC.gov API, and real-time data is provided by IEXCloud. Users can sign in, create stock watchlists, see price charts, and browse deep into the financial statements.
+          Helpful tooltips elaborate on different financial metrics if you hover over them, allowing users to learn if they don't already know about the topic.`
+        }
         link={null}
         ghlink={"https://github.com/dkroll713/simplestocks"}
         modalOpen={modalOpen}

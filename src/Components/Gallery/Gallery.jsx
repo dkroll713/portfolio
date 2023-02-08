@@ -47,18 +47,18 @@ const Gallery = (props) => {
             ?
             <div className="gallery">
               <div className="imageContainer">
-                <div className="leftArrow" onClick={goLower}>
-                  Left Arrow
+                <div className="leftArrow arrow" onClick={goLower}>
+                  ❰
                 </div>
                 <img
                   src={images[active]}
                   onClick={toggleModal}
                 />
                 <div
-                  className="rightArrow"
+                  className="rightArrow arrow"
                   onClick={goHigher}
                 >
-                  Right Arrow
+                  ❱
                 </div>
               </div>
             </div>

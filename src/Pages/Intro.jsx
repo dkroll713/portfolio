@@ -12,10 +12,6 @@ const Intro = (props) => {
   // }
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-
-  })
-
   // const
   function renderCanvas() {
     if (loaded) {
@@ -84,6 +80,15 @@ const Intro = (props) => {
         setTimeout(() => {
           loadText('<\\ I can be reached via my email at the bottom of the page')
         }, 10000)
+        // setTimeout(() => {
+        //   loadText('<\\ ~')
+        // }, 11000)
+        // setTimeout(() => {
+        //   loadText('<\\ ~ ')
+        // }, 12000)
+        setTimeout(() => {
+          loadText('<\\ Scroll down to see more . . .')
+        }, 13000)
       }
       let line = 80;
       let delay = 0;
@@ -107,8 +112,8 @@ const Intro = (props) => {
           index++;
         }
         // console.log(map)
-        let maxTime = 75;
-        let minTime = 25;
+        let maxTime = 25;
+        let minTime = 5;
 
         index = 0;
         let space = 10;
@@ -159,7 +164,7 @@ const Intro = (props) => {
           index++;
           idx++;
         }
-        line += 40;
+        line += 60;
         // setTimeout(ctx.fillText('a', spacing['a'], 80), 1500)
         const a = () => {
           // setTimeout(() => {
