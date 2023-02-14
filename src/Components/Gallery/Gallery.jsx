@@ -51,7 +51,7 @@ const Gallery = (props) => {
                   ❰
                 </div>
                 <img
-                  src={images[active]}
+                  src={images[active].image}
                   onClick={toggleModal}
                 />
                 <div
@@ -61,6 +61,7 @@ const Gallery = (props) => {
                   ❱
                 </div>
               </div>
+              <div className="captions">{images[active].caption}</div>
             </div>
             :
             <ImageModal

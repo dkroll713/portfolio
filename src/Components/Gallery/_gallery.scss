@@ -17,31 +17,43 @@
   justify-content: center;
 }
 
-// .leftArrow {
-//   height: 100%;
-//   width: 33%;
-// }
+.leftArrow {
+  justify-content: start;
+}
 
-// .rightArrow {
-//   height: 100%;
-//   width: 33%;
-// }
+.rightArrow {
+  justify-content: end;
+}
 
 .arrow {
   display: flex;
   height: 100%;
   width: 100%;
-  justify-content: center;
+  // justify-content: center;
   margin: 5px;
   align-items: center;
   font-size: 300%;
   cursor: pointer;
+  transition: 250ms;
   // border: 5px solid white;
+}
+
+.arrow:hover {
+  font-size: 350%;
+  transition: 250ms;
 }
 
 img {
   cursor: pointer;
   border: 1px solid white;
+}
+
+.captions {
+  width: 100%;
+  // margin-left: 2.5%;
+  // margin-right: 2.5%;
+  background-color: black;
+  text-align: center;
 }
 
 .imageModal {

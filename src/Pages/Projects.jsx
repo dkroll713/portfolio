@@ -31,12 +31,30 @@ const Projects = (props) => {
         link={"https://54.174.194.84/"}
         ghlink={"https://github.com/dkroll713/reach"}
         assets={{
-          0: './assets/mastermind_rules.png',
-          1: './assets/mastermind_leaderboards.png',
-          2: './assets/mastermind_history.png',
-          3: './assets/mastermind_difficulties.png',
-          4: './assets/mastermind_guess.png',
-          5: './assets/mastermind_matrix.png'
+          0: {
+            image: './assets/mastermind_rules.png',
+            caption: 'The rules of the game'
+          },
+          1: {
+            image: './assets/mastermind_leaderboards.png',
+            caption: 'Global leaderboards'
+          },
+          2: {
+            image: './assets/mastermind_history.png',
+            caption: `Clicking on a score reveals that game's history`
+          },
+          3: {
+            image: './assets/mastermind_difficulties.png',
+            caption: 'Users can select different difficulties or customize their own'
+          },
+          4: {
+            image: './assets/mastermind_guess.png',
+            caption: 'Guessing in action'
+          },
+          5: {
+            image: './assets/mastermind_matrix.png',
+            caption: 'Users can toggle two different themes'
+          }
         }}
         modalOpen={modalOpen}
         setModalOpen={setModalOpen}
